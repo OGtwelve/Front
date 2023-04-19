@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    transform: scale(0.8);
+    transform-origin: center center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* add any other styles you want for your header */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* add any other styles you want for your footer */
+}
+
+ul{
+    margin-top: 0;
+}
