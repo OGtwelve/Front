@@ -23,6 +23,7 @@ const i18n = createI18n({
             }
         }
     },
+    globalInjection: true
 });
 const app = createApp(App)
 app.use(router)

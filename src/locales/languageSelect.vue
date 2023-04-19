@@ -4,7 +4,7 @@
         <div style="width: 90px;height: 30px" class="language-select">
             <el-select v-model="currentLang" @change="handleChangeLang">
                 <el-option v-for="(item, index) in langs" :key="index" :label="item.label"
-                           :value="item.value"></el-option>
+                           :value="item.value" ></el-option>
             </el-select>
         </div>
     </div>
@@ -30,11 +30,6 @@ export default {
     },
     methods: {
         handleChangeLang() {
-            if (this.currentLang === 'zh-CN') {
-                localStorage.setItem('local', 'zh-CN')
-            } else {
-                localStorage.setItem('local', 'en-US')
-            }
             const i18n = this.$i18n;
             const currentLocale = i18n.locale;
             const locales = i18n.availableLocales;
@@ -42,10 +37,13 @@ export default {
 
             if (nextLocale !== currentLocale && locales.includes(nextLocale)) {
                 i18n.locale = nextLocale;
-                document.title = this.$t('home');
             }
+            document.title = this.$t('siteTitle');
         },
     },
+    mounted() {
+        this.handleChangeLang()
+    }
 }
 </script>
 
