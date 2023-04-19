@@ -25,17 +25,19 @@ const i18n = createI18n({
     },
     globalInjection: true
 });
+
 const app = createApp(App)
 app.use(router)
 app.use(i18n)
 app.use(ElementPlus)
+
 app.config.globalProperties.$toggleLanguage = function () {
     const i18n = this.$i18n;
     const currentLocale = i18n.locale;
     const locales = i18n.availableLocales;
-
     const index = locales.indexOf(currentLocale);
     i18n.locale = locales[(index + 1) % locales.length];
 };
+
 app.mount('#app')
 

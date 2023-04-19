@@ -1,7 +1,7 @@
 <template>
     <div class="language-select-bar">
         <span class="language-select-word">{{ $t('language') }}</span>
-        <div style="width: 90px;height: 30px" class="language-select">
+        <div class="language-select">
             <el-select v-model="currentLang" @change="handleChangeLang">
                 <el-option v-for="(item, index) in langs" :key="index" :label="item.label"
                            :value="item.value" ></el-option>
@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .language-select-bar {
     display: flex; /* 使用 flexbox 布局 */
     justify-content: center; /* 横向居中 */
@@ -61,6 +61,8 @@ export default {
 }
 
 .language-select-bar .language-select {
+    width: 100px;
+    height: 30px;
     text-align: center; /* 文字居中 */
 }
 </style>

@@ -1,6 +1,8 @@
 {
-  "siteTitle" : "Legacy Keeper",
-  "home" : "Home",
-  "hello" : "Hello",
-  "language" : "Language"
+  "siteTitle": "Heritage Guardian",
+  "home": "Home",
+  "hello": "Hello",
+  "language": "Language",
+  "about": "About",
+  "contact": "Contact"
 }

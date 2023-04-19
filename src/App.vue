@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="app-container">
         <Header ref="header"/>
         <main ref="main">
             <router-view/>
@@ -23,14 +23,28 @@ export default {
 
 <style src="@/css/common.css"></style>
 <style>
-*{
-    font-family: Calibri, sans-serif;
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+    Helvetica, Arial,
+    sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+    font-size: 16px;
 }
-body{
+
+body {
     margin: 0;
 }
-main {
-    margin-top: 100px; /* Set the margin-top value to the same height as the header */
-    margin-bottom: 100px; /* Set the margin-bottom value to the same height as the footer */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 </style>

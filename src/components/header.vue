@@ -6,9 +6,9 @@
                 <nav class="nav">
                     <ul class="nav-left">
                         <li class="icon"><a href="/"><img src="@/assets/logo.png" alt="logo" class="icon-img"></a></li>
-                        <li class="normal-li"><router-link to="/">Home</router-link></li>
-                        <li class="normal-li"><router-link to="/about">About</router-link></li>
-                        <li class="normal-li"><router-link to="/contact">Contact</router-link></li>
+                        <li class="normal-li"><router-link to="/">{{ $t('home') }}</router-link></li>
+                        <li class="normal-li"><router-link to="/about">{{ $t('about') }}</router-link></li>
+                        <li class="normal-li"><router-link to="/contact">{{ $t('contact') }}</router-link></li>
                     </ul>
                     <div class="nav-right">
                         <a>Login</a>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style src="@/css/common.css"/>
-<style>
+<style scoped>
 .nav{
     display: flex;
     -webkit-box-pack: justify;
@@ -80,5 +80,8 @@ export default {
     cursor: pointer;
     list-style: none;
     text-align: center;
+}
+.normal-li:last-of-type{
+    width: fit-content;
 }
 </style>
